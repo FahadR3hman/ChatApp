@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct Channel {
+    public private(set) var  ChannelName : String!
+    public private(set) var ChannelDescription : String!
+    public private(set) var ChannelId : String!
+}

@@ -10,26 +10,59 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
+    @IBOutlet weak var userEmailField: UITextField!
+    
+    @IBOutlet weak var userPasswordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        activity.isHidden = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func Dismiss(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func Login(_ sender: Any) {
+        activity.isHidden = false
+        activity.startAnimating()
+        guard let emailField = userEmailField.text , userEmailField.text != "" else {
+            return
+        }
+        guard let pass = userPasswordField.text , userPasswordField.text != "" else {
+            return
+        }
+        
+        AuthService.instance.login(email: emailField, password: pass) { (success) in
+            if (success) {
+                AuthService.instance.FindUserByEmail(completion: { (success) in
+                    NotificationCenter.default.post(name: Notif_user_data_did_change, object: nil)
+                    self.activity.stopAnimating()
+                    self.activity.hidesWhenStopped = true
+                    self.dismiss(animated: true, completion: nil)
+                
+                })
+            }
+        }
     }
-    */
-
+    
+    @IBAction func SignUp(_ sender: Any) {
+        performSegue(withIdentifier: To_SignUp, sender: nil)
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }
+
+
+
+
+
+
+

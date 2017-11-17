@@ -9,27 +9,43 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-
+    @IBOutlet weak var userImage: ImageCircle!
+    
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var bgView: UIView!
+    
+    @IBOutlet weak var userEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        userName.text = UserDataService.instance.Name
+        userEmail.text = UserDataService.instance.email
+        userImage.image = UIImage(named: UserDataService.instance.AvatarName)
+        userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        
+        let tapToClose = UITapGestureRecognizer(target: self, action: #selector(closeTap(_:)))
+        bgView.addGestureRecognizer(tapToClose)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    @IBAction func closePressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func logOut(_ sender: Any) {
+        UserDataService.instance.logOutuser()
+        NotificationCenter.default.post(name: Notif_user_data_did_change, object: nil)
+        dismiss(animated: true, completion: nil)
+        
+        
     }
-    */
-
+    
+    @objc func closeTap (_ recognizer: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
 }
