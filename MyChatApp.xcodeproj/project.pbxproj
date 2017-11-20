@@ -21,7 +21,10 @@
 		2953E8CE1FB5732A00E820A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953E8CD1FB5732A00E820A5 /* Constants.swift */; };
 		2953E8D01FB5787400E820A5 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953E8CF1FB5787400E820A5 /* LoginVC.swift */; };
 		2953E8D21FB579F500E820A5 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2953E8D11FB579F500E820A5 /* CreateAccountVC.swift */; };
+		2977D43A1FC29F8700CDA0FC /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2977D4391FC29F8700CDA0FC /* MessageCell.swift */; };
 		29D11D0F1FBB04F5003FC4F5 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D11D0E1FBB04F5003FC4F5 /* UserDataService.swift */; };
+		29D78BF21FBEA4010093D9D6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D78BF11FBEA4010093D9D6 /* Message.swift */; };
+		29D78BF41FBEB10A0093D9D6 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D78BF31FBEB10A0093D9D6 /* KeyboardBoundView.swift */; };
 		29D7C5D11FB55F4300285B98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D7C5D01FB55F4300285B98 /* AppDelegate.swift */; };
 		29D7C5D61FB55F4300285B98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D7C5D41FB55F4300285B98 /* Main.storyboard */; };
 		29D7C5D81FB55F4300285B98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29D7C5D71FB55F4300285B98 /* Assets.xcassets */; };
@@ -52,7 +55,10 @@
 		2953E8CD1FB5732A00E820A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2953E8CF1FB5787400E820A5 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		2953E8D11FB579F500E820A5 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		2977D4391FC29F8700CDA0FC /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		29D11D0E1FBB04F5003FC4F5 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		29D78BF11FBEA4010093D9D6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		29D78BF31FBEB10A0093D9D6 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		29D7C5CD1FB55F4300285B98 /* MyChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D7C5D01FB55F4300285B98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29D7C5D51FB55F4300285B98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				291543C81FBD561D007A367D /* Channel.swift */,
+				29D78BF11FBEA4010093D9D6 /* Message.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -101,9 +108,11 @@
 			isa = PBXGroup;
 			children = (
 				2953E8CA1FB56A0900E820A5 /* GradientView.swift */,
+				29D78BF31FBEB10A0093D9D6 /* KeyboardBoundView.swift */,
 				29FFE2771FBC213D004BE519 /* ImageCircle.swift */,
 				29FFE2751FBC11F8004BE519 /* AvatarPickerCell.swift */,
 				291543CA1FBD5BB3007A367D /* ChannelCell.swift */,
+				2977D4391FC29F8700CDA0FC /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,12 +363,15 @@
 				294599131FBAAFF000BCAFF8 /* AuthService.swift in Sources */,
 				2953E8D01FB5787400E820A5 /* LoginVC.swift in Sources */,
 				2953E8CB1FB56A0900E820A5 /* GradientView.swift in Sources */,
+				2977D43A1FC29F8700CDA0FC /* MessageCell.swift in Sources */,
 				29FFE2741FBC0FF8004BE519 /* ChooseAvatarVC.swift in Sources */,
 				29D11D0F1FBB04F5003FC4F5 /* UserDataService.swift in Sources */,
 				291543CB1FBD5BB3007A367D /* ChannelCell.swift in Sources */,
 				29D7C5D11FB55F4300285B98 /* AppDelegate.swift in Sources */,
 				29203CE91FB5632100827621 /* SWRevealViewController.m in Sources */,
 				2953E8CE1FB5732A00E820A5 /* Constants.swift in Sources */,
+				29D78BF41FBEB10A0093D9D6 /* KeyboardBoundView.swift in Sources */,
+				29D78BF21FBEA4010093D9D6 /* Message.swift in Sources */,
 				29FFE2781FBC213F004BE519 /* ImageCircle.swift in Sources */,
 				291543D71FBD6F6E007A367D /* SocketService.swift in Sources */,
 			);
@@ -501,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E4JE8NC24X;
+				DEVELOPMENT_TEAM = R2HK8875FX;
 				INFOPLIST_FILE = MyChatApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -521,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = E4JE8NC24X;
+				DEVELOPMENT_TEAM = R2HK8875FX;
 				INFOPLIST_FILE = MyChatApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -73,6 +73,7 @@ class UserDataService {
         Name = ""
         email = ""
         MessagesService.instance.ClearChannels()
+        MessagesService.instance.removeMessages()
     }
     
 }

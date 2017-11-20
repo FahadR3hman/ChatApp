@@ -39,6 +39,7 @@ let AddUserUrl = basicUrl + "user/add"
 let findUserByEmail = basicUrl + "user/byEmail/"
 
 let channelUrl = basicUrl + "channel/"
+let messageUrl = basicUrl + "message/byChannel/"
 
 
 
