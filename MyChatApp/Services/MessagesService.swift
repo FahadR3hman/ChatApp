@@ -17,6 +17,7 @@ class MessagesService {
     var channels = [Channel]()
     var messages = [Message]()
     var selectedChannel : Channel?
+    var unReadChannels = [String]()
     
     func findAllChannels (completion : @escaping completionHandler) {
         let auth = "Bearer " + AuthService.instance.AuthToken

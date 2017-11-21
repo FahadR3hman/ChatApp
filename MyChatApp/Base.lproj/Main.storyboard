@@ -81,7 +81,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 <connections>
                                     <action selector="HideButton:" destination="NBY-zL-lBC" eventType="editingChanged" id="u2W-fr-P0q"/>
                                 </connections>
@@ -111,15 +111,15 @@
                                                         <constraint firstAttribute="height" constant="50" id="4un-Nd-K6M"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fahad Rehman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-TX-KEc">
-                                                    <rect key="frame" x="70" y="10" width="110.66666666666669" height="22"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Fahad Rehman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-TX-KEc">
+                                                    <rect key="frame" x="70" y="10" width="117.66666666666669" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:33 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-sw-4Hq">
-                                                    <rect key="frame" x="186.66666666666666" y="11" width="60" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:33 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eLc-sw-4Hq">
+                                                    <rect key="frame" x="193.66666666666666" y="13.666666666666666" width="51" height="16.666666666666671"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -139,7 +139,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="wAm-sK-8si" secondAttribute="trailing" constant="12" id="cDZ-E9-tQg"/>
                                                 <constraint firstItem="SeS-TX-KEc" firstAttribute="top" secondItem="CYh-l8-eIj" secondAttribute="top" id="dXa-vh-zU8"/>
                                                 <constraint firstItem="eLc-sw-4Hq" firstAttribute="leading" secondItem="SeS-TX-KEc" secondAttribute="trailing" constant="6" id="eQ7-ed-vJU"/>
-                                                <constraint firstItem="eLc-sw-4Hq" firstAttribute="centerY" secondItem="SeS-TX-KEc" secondAttribute="centerY" id="n2i-sC-3h6"/>
+                                                <constraint firstItem="eLc-sw-4Hq" firstAttribute="centerY" secondItem="SeS-TX-KEc" secondAttribute="centerY" constant="1" id="n2i-sC-3h6"/>
                                                 <constraint firstItem="wAm-sK-8si" firstAttribute="top" secondItem="SeS-TX-KEc" secondAttribute="bottom" constant="8" id="nhP-Ad-WY0"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -323,14 +323,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-hG-ziq">
-                                <rect key="frame" x="130.33333333333337" y="70" width="153.66666666666663" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k7z-hG-ziq">
+                                <rect key="frame" x="135.66666666666669" y="70" width="143.66666666666669" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackLogo" translatesAutoresizingMaskIntoConstraints="NO" id="d8y-BR-bZt">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="d8y-BR-bZt">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="48r-b7-Mml"/>
+                                            <constraint firstAttribute="height" constant="40" id="IgB-IQ-W3S"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyChatApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7CJ-yK-hfV">
-                                        <rect key="frame" x="58.000000000000007" y="8.3333333333333268" width="95.666666666666686" height="23.333333333333329"/>
+                                        <rect key="frame" x="48.000000000000007" y="8.3333333333333268" width="95.666666666666686" height="23.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -365,7 +369,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="24"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3N-kF-F5o" customClass="GradientView" customModule="MyChatApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="26" width="314" height="1"/>
@@ -475,7 +479,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="24"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwx-TY-KK9" customClass="GradientView" customModule="MyChatApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="26.000000000000014" width="314" height="1"/>
@@ -497,7 +501,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="24"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tJY-f6-CIO" customClass="GradientView" customModule="MyChatApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="26" width="314" height="1"/>
@@ -519,7 +523,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="24"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9d-qv-FtO" customClass="GradientView" customModule="MyChatApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="26" width="314" height="1"/>
@@ -734,11 +738,11 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
+        <image name="logo" width="349" height="349"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
         <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
-        <image name="smackLogo" width="48" height="40"/>
     </resources>
 </document>

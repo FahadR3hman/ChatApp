@@ -30,6 +30,21 @@ class UserDataService {
         self.AvatarName = avatarName
         print(avatarName)
     }
+    
+    
+    //2017-11-20T14:30:28.902Z
+    
+    func changeDate (components : String) -> String {
+
+        var replaced = components
+        replaced.replace("T", with: " ")
+ 
+        
+        let dotRemoval = replaced.components(separatedBy: ".").first
+        let timeType = "GMT"
+        let finalTime = "\(String(describing: dotRemoval!)) \(timeType)"
+        return finalTime
+    }
     func returnUIColor(components: String) -> UIColor {
         // "[1,1,1,1]" RGB
         
@@ -79,5 +94,10 @@ class UserDataService {
 }
 
 
+extension String {
+    mutating func replace(_ originalString:String, with newString:String) {
+        self = self.replacingOccurrences(of: originalString, with: newString)
+    }
+}
 
 

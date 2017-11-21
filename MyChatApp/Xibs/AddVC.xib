@@ -62,7 +62,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="279" height="31"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFS-wP-mKn" customClass="GradientView" customModule="MyChatApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="31" width="279" height="1"/>
@@ -78,16 +78,16 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7pX-W3-dQH">
-                            <rect key="frame" x="24" y="140" width="287" height="32"/>
+                            <rect key="frame" x="32" y="140" width="279" height="32"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IjZ-ho-2Rx">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="31"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="279" height="31"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                 </textField>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLO-T2-Pyl" customClass="GradientView" customModule="MyChatApp" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="31" width="287" height="1"/>
+                                    <rect key="frame" x="0.0" y="31" width="279" height="1"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="Edi-7T-WxD"/>
@@ -123,7 +123,7 @@
                         <constraint firstItem="CwR-p3-EFP" firstAttribute="top" secondItem="Dyb-mx-AqP" secondAttribute="top" constant="8" id="cCn-tc-yni"/>
                         <constraint firstItem="rGB-X4-xwX" firstAttribute="top" secondItem="7pX-W3-dQH" secondAttribute="bottom" constant="32" id="dxe-8p-tTg"/>
                         <constraint firstItem="wKI-fc-Wgs" firstAttribute="top" secondItem="Dyb-mx-AqP" secondAttribute="top" constant="10" id="f0S-7a-WK7"/>
-                        <constraint firstItem="7pX-W3-dQH" firstAttribute="leading" secondItem="Dyb-mx-AqP" secondAttribute="leading" constant="24" id="ljb-gL-gQq"/>
+                        <constraint firstItem="7pX-W3-dQH" firstAttribute="leading" secondItem="Dyb-mx-AqP" secondAttribute="leading" constant="32" id="ljb-gL-gQq"/>
                         <constraint firstItem="wKI-fc-Wgs" firstAttribute="centerX" secondItem="Dyb-mx-AqP" secondAttribute="centerX" id="qh6-Ug-1Cc"/>
                         <constraint firstItem="7pX-W3-dQH" firstAttribute="top" secondItem="7Wj-S9-pXv" secondAttribute="bottom" constant="32" id="sVo-E0-YTW"/>
                         <constraint firstItem="7Wj-S9-pXv" firstAttribute="leading" secondItem="Dyb-mx-AqP" secondAttribute="leading" constant="32" id="vTu-bc-BGO"/>

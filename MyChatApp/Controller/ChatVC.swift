@@ -38,15 +38,26 @@ class ChatVC: UIViewController ,UITableViewDelegate,UITableViewDataSource {
         tableView.rowHeight = UITableViewAutomaticDimension
         sendMessageOutlet.isHidden = true
        
-        SocketService.instance.getChatMessage { (success) in
-            if (success) {
+        SocketService.instance.getChatMessage { (newMessage) in
+            if (newMessage.ChannelId == MessagesService.instance.selectedChannel?.ChannelId && AuthService.instance.isLoggedIn) {
                 self.tableView.reloadData()
-                if (MessagesService.instance.messages.count > 0) {
-                    let indexx = IndexPath.init(row: MessagesService.instance.messages.count - 1, section: 0)
-                    self.tableView.scrollToRow(at: indexx, at: .bottom, animated: true)
-                }
+                print("Messages are not showing up")
+                                if (MessagesService.instance.messages.count > 0) {
+                                    let indexx = IndexPath.init(row: MessagesService.instance.messages.count - 1, section: 0)
+                                    self.tableView.scrollToRow(at: indexx, at: .bottom, animated: true)
+                                }
             }
         }
+        
+//        SocketService.instance.getChatMessage { (success) in
+//            if (success) {
+//                self.tableView.reloadData()
+//                if (MessagesService.instance.messages.count > 0) {
+//                    let indexx = IndexPath.init(row: MessagesService.instance.messages.count - 1, section: 0)
+//                    self.tableView.scrollToRow(at: indexx, at: .bottom, animated: true)
+//                }
+//            }
+//        }
         SocketService.instance.getTypingUser { (typingUsers) in
             guard let channelid = MessagesService.instance.selectedChannel?.ChannelId  else {
                 return
